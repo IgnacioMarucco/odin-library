@@ -9,6 +9,40 @@
   <script src="script.js" defer></script>
 </head>
 <body>
+  <main>
+    <header>
+      <h1>Odin Library</h1>
+      <button class="show-form-btn">Add New Book</button>
+    </header>
+
+    <section class="library-container"></section>
+  </main>
+
+  <dialog id="modal">
+    <form action="">
+      <h3>NEW BOOK:</h3>
+      <fieldset class="container-input">
+        <label for="book_title">TITLE</label>
+        <input type="text" name="book_title" id="book_title" placeholder="TITLE" required>
+      </fieldset>
   
+      <fieldset class="container-input">
+        <label for="book_author">AUTHOR</label>
+        <input type="text" name="book_author" id="book_author" placeholder="AUTHOR" required>
+      </fieldset>
+  
+      <fieldset class="container-input">
+        <label for="book_pages">PAGES</label>
+        <input type="number" name="book_pages" id="book_pages" placeholder="PAGES" required>
+      </fieldset>
+  
+      <fieldset>
+          <label for="book_read">Read?</label>
+          <input type="checkbox" id="book_read"/>
+      </fieldset>
+  
+      <input type="submit" value="Add Book" class="add-book-btn" >
+    </form>
+  </dialog>
 </body>
 </html>

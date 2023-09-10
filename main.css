@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 /* RESET */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -43,4 +44,97 @@ table {
 	border-spacing: 0;
 }
 
-/* MAIN */
+/* MAIN  CSS*/
+:root {
+  --light-color: white;
+  --dark-color: #1a1b26;
+
+  --main-color: #33635c;
+  --secondary-color: #24283b;
+  --optional-color: #f5a272;
+
+  --default-font: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --main-font: 'Roboto';
+}
+body {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 50px;
+}
+
+h1 {
+  font-size: 3rem;
+  padding: 50px;
+}
+
+
+.library-container {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.card--footer {
+  display: flex;
+  flex-direction: column;
+}
+
+/* DIALOG */
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0;
+  padding: 0 10px;
+}
+
+/* CARDS */
+.card {
+  background-color: var(--main-color);
+  color: white;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  border-left: 15px solid var(--optional-color);
+}
+
+.card--footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn__danger {
+  background-color: red;
+}
+
+.btn__ok {
+  background-color: var(--optional-color);
+}
