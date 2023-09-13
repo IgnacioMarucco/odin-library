@@ -2,15 +2,16 @@
 
 const myLibrary = [];
 
-function Book(title, author, pages, read) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
-}
-
-Book.prototype.readStatusToggle = function () {
-  this.read = this.read ? false : true;
+class Book {
+  constructor(title, author, pages, read) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
+  }
+  readStatusToggle() {
+    this.read = this.read ? false : true;
+  }
 }
 
 function addBookToLibrary() {
@@ -100,7 +101,6 @@ function showBooks() {
 }
 
 // Placeholder books
-
 myLibrary.push(new Book("Lord of the Rings", "J.R.R Tolkien", 1178, true));
 myLibrary.push(new Book("The King's Fifth", "Scott O'Dell", 272, true));
 myLibrary.push(new Book("1984", "George Orwell", 328, false));
@@ -108,4 +108,3 @@ myLibrary.push(new Book("1984", "George Orwell", 328, false));
 document.addEventListener("DOMContentLoaded", function() {
   showBooks();
 });
-
